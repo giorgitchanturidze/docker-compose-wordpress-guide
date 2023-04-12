@@ -40,7 +40,9 @@ cd some-dir
 
 **3.** Delete `docker-compose.override.yml`.
 
-**4.** Set up Mariadb volume by uncomment `13` and `15` lines and changing path in `docker-compose.yml` to prevent erasing database after `docker compose down`.
+**4.** Ensure database credentials match in your wp-config.php and .env files
+
+**5.** Set up Mariadb volume by uncomment `13` and `15` lines and changing path in `docker-compose.yml` to prevent erasing database after `docker compose down`.
 
 ```
 volumes:
@@ -48,7 +50,7 @@ volumes:
       - ./mariadb-data:/var/lib/mysql # Use bind mount
 ```
 
-**5.** Uncomment `NGINX_SERVER_ROOT` for Nginx and add `/web` to the end.
+**6.** Uncomment `NGINX_SERVER_ROOT` for Nginx and add `/web` to the end.
 
 ### Congrats you can now run WordPress!
 * Run in terminal:
