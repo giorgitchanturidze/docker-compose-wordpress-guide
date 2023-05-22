@@ -52,6 +52,8 @@ volumes:
 
 **6.** Uncomment `NGINX_SERVER_ROOT` for Nginx and add `/web` to the end.
 
+**7.** Update [.gitignore](https://github.com/giorgitchanturidze/docker-compose-wordpress-guide/blob/main/.gitignore)
+
 ### Congrats you can now run WordPress!
 * Run in terminal:
 ```
