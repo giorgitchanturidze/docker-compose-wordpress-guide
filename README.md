@@ -55,18 +55,6 @@ volumes:
 
 **6.** Uncomment `NGINX_SERVER_ROOT` for Nginx and add `/web` to the end.
 
-**7.** Update [`.gitignore`](https://github.com/giorgitchanturidze/docker-compose-wordpress-guide/blob/main/.gitignore).
-
-**8.** Update `coposer.json`
-```json
-    "preserve-paths": [
-      "web/wp-config.php",
-      "web/wp-content/uploads"
-      "web/wp-content/themes",
-      "web/wp-content/plugins"
-    ]
-```
-
 ### Congrats you can now run WordPress!
 * Run in terminal:
 ```
@@ -78,4 +66,17 @@ docker compose up -d
 * Open browser and go to this adress:
  ```url
  http://wp.docker.localhost:8000/
+```
+## Optional steps
+
+**1.** Update [`.gitignore`](https://github.com/giorgitchanturidze/docker-compose-wordpress-guide/blob/main/.gitignore).
+
+**2.** Update `coposer.json`
+```json
+    "preserve-paths": [
+      "web/wp-config.php",
+      "web/wp-content/uploads"
+      "web/wp-content/themes",
+      "web/wp-content/plugins"
+    ]
 ```
