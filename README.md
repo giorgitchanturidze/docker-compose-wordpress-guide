@@ -6,7 +6,7 @@ Docker4Wordpress is an open-source project [GitHub page](https://github.com/wodb
 ## Requirements ##
 
 * Install PHP
-```
+```bash
 sudo apt install php-cli php-curl php-gd php-mbstring php-sqlite3 php-xml
 ```
 
@@ -24,7 +24,7 @@ sudo apt install php-cli php-curl php-gd php-mbstring php-sqlite3 php-xml
 
 **1.** Start a new project:
 
-```
+```bash
 composer create-project wodby/wordpress-composer some-dir --stability dev --no-interaction
 ```
 
@@ -33,7 +33,7 @@ The `composer create-project` command passes ownership of all files to the proje
 **2.** Download and unpack `docker4wordpress.tar.gz` from the [latest stable release](https://github.com/wodby/docker4wordpress/releases) to your project root.
 
 * Go to project root.
-```
+```bash
 cd some-dir
 ```
 * Unpack `docker4drupal.tar.gz`
@@ -44,7 +44,7 @@ cd some-dir
 
 **5.** Set up Mariadb volume by uncomment `13` and `15` lines and changing path in `docker-compose.yml` to prevent erasing database after `docker compose down`.
 
-```
+```yml
 volumes:
 #      - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
       - ./mariadb-data:/var/lib/mysql # Use bind mount
@@ -52,10 +52,10 @@ volumes:
 
 **6.** Uncomment `NGINX_SERVER_ROOT` for Nginx and add `/web` to the end.
 
-**7.** Update [.gitignore](https://github.com/giorgitchanturidze/docker-compose-wordpress-guide/blob/main/.gitignore).
+**7.** Update [`.gitignore`](https://github.com/giorgitchanturidze/docker-compose-wordpress-guide/blob/main/.gitignore).
 
 **8.** Update `coposer.json`
-```
+```json
     "preserve-paths": [
       "web/wp-config.php",
       "web/wp-content/uploads"
@@ -73,6 +73,6 @@ docker compose up -d
 [^Note]: docker compose is newer version of docker-composer.
 
 * Open browser and go to this adress:
- ```
+ ```url
  http://wp.docker.localhost:8000/
 ```
