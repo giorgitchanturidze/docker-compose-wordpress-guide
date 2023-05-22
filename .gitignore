@@ -1,0 +1,38 @@
+
+# Docker
+docker-compose.override.yml
+mariadb-data/
+
+# Node
+node_modules/
+
+# Composer
+/vendor/
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+
+# Web
+
+!web/
+web/*
+!web/wp-content/
+web/wp-content/*
+!web/wp-content/themes/
+!web/wp-content/plugins/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Other files
+wodby.yml
+*.swp
+*.swo
