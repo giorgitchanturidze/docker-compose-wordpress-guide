@@ -1,7 +1,7 @@
 # [Docker4Wordpress](https://github.com/wodby/docker4wordpress) <a href="https://github.com/wodby/docker4wordpress"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1200px-WordPress_blue_logo.svg.png" width="30"></a>
 ## This is [Docker4Wordpress](https://github.com/wodby/docker4wordpress) installation instructions:
 
-Docker4Wordpress is an open-source project [GitHub page](https://github.com/wodby/docker4wordpress) that provides pre-configured `docker-compose.yml` file with images to spin up local environment on Linux, Mac OS X and Windows.
+Docker4Wordpress is an open-source project [GitHub page](https://github.com/wodby/docker4wordpress) that provides pre-configured `docker-compose.yml` file with images to spin up local environment on Linux.
 
 ## Requirements ##
 
@@ -40,7 +40,10 @@ cd some-dir
 
 **3.** Delete `docker-compose.override.yml`.
 
-**4.** Ensure database credentials match in your wp-config.php and .env files
+**4.** Update makeFile `docker-compose` with `docker compose` if you are using new docker version. Install make if you already have not it.
+```bash
+sudo apt install make
+``` 
 
 **5.** Set up Mariadb volume by uncomment `13` and `15` lines and changing path in `docker-compose.yml` to prevent erasing database after `docker compose down`.
 
